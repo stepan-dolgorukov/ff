@@ -1,0 +1,62 @@
+\documentclass[14pt,a4paper,oneside,russian]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\newtheorem*{axiom1}{Ассоциативность сложения}
+\newtheorem*{axiom2}{Существование нейтрального элемента по сложению}
+\newtheorem*{axiom3}{Существование обратного элемента по сложению}
+
+\begin{document}
+
+\begin{axiom1}
+$$ ((a_1, b_1) + (a_2, b_2)) + (a_3, b_3) = $$
+$$ = (\frac{a_1}{b_1} + \frac{a_2}{b_2}) + \frac{a_3}{b_3} = $$
+$$ = \frac{a_1 * b_2 + a_2 * b_1}{b_1 * b_2} + \frac{a_3}{b_3} = $$
+$$ = \frac{(a_1 * b_2 + a_2 * b_1) * b_3 + a_3 * (b_1 * b_2)}{b_1 * b_2 * b_3} = $$
+$$ = \frac{a_1 * b_2 * b_3 + a_2 * b_1 * b_3 + a_3 * b_1 * b_2}{b_1 * b_2 * b_3} $$
+
+Сравним с:
+$$ ( a_1, b_1 ) + (( a_2, b_2 ) + ( a_3, b_3 )) = $$
+$$ = \frac{a_1}{b_1} + (\frac{a_2}{b_2} + \frac{a_3}{b_3}) = $$
+$$ = \frac{a_1}{b_1} + (\frac{a_2 * b_3 + a_3 * b_2}{b_2 * b_3}) = $$
+$$ = \frac{(b_2 * b_3) * a_1 + (a_2 * b_3 + a_3 * b_2) * b_1}{b_1 * b_2 * b_3} = $$
+$$ = \frac{b_2 * b_3 * a_1 + a_2 * b_3 * b_1 + a_3 * b_2 * b_1}{b_1 * b_2 * b_3} =  $$
+
+Пользуемся коммутативностью (перестановочным законом) вещественных чисел:
+
+$$ = \frac{a_1 * b_2 * b_3 + a_2 * b_1 * b_3 + a_3 * b_1 * b_2}{b_1 * b_2 * b_3} $$
+
+Получились одинаковые формулы. $ \implies $ Они задают равные элементы. $ \implies $
+$ ((a_1, b_1) + (a_2, b_2)) + (a_3, b_3) = (a_1, b_1) + ((a_2, b_2) + (a_3, b_3)) $
+
+\end{axiom1}
+\newpage
+
+\begin{axiom2}
+$$ (a, b) + (0, 1) = (a * 1 + b * 0, b * 1) = (a, b) $$
+\begin{center}
+$ \implies (0, 1) $ - нейтральный по сложению справа (1)
+\end{center}
+$$ (0, 1) + (a, b) = (0 * b + 1 * a, 1 * b) = (a, b) $$
+\begin{center}
+$ \implies (0, 1) $ - нейтральный по сложению справа (1)
+\end{center}
+\end{axiom2}
+
+$ (1), (2) \implies (0, 1) $ - нейтральный элемент по сложению
+\newpage
+
+\begin{axiom3}
+$$ (a, b) + (a, -b) = (a * (-b) + b * a, b * (-b)) = $$
+$$ = ( -(a * b) + (a * b), b * (-b) ) = (0, b * (-b)) = (0, 1) $$
+$ \implies (a, -b) = -(a, b) $
+
+$$ (a, b) + (-a, b) = (a * b + b * (-a), b * b) = $$
+$$ = (a * b + ((-a) * b), b * b) = (0, b * b) = (0, 1) $$
+$ \implies -(a, b) = (-a, b) $
+\end{axiom3}
+
+\end{document}
