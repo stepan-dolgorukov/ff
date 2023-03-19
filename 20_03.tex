@@ -8,6 +8,7 @@
 \newtheorem*{axiom1}{Ассоциативность сложения}
 \newtheorem*{axiom2}{Существование нейтрального элемента по сложению}
 \newtheorem*{axiom3}{Существование обратного элемента по сложению}
+\newtheorem*{axiom4}{Коммутативность сложения}
 
 \begin{document}
 
@@ -58,5 +59,15 @@ $$ (a, b) + (-a, b) = (a * b + b * (-a), b * b) = $$
 $$ = (a * b + ((-a) * b), b * b) = (0, b * b) = (0, 1) $$
 $ \implies -(a, b) = (-a, b) $
 \end{axiom3}
+\newpage
+
+\begin{axiom4}
+$$ (a, b) + (c , d) = \frac{a}{b} + \frac{c}{d} = \frac{a * d + c * b}{b * d} $$
+$$ (c, d) + (a, b) = \frac{c}{d} + \frac{a}{b} = \frac{c * b + d * a}{d * b} = $$
+
+Пользуемся коммутативностью сложения вещественных чисел:
+$$ = \frac{c * b + d * a}{d * b} = \frac{a * d + b * c}{b * d} $$
+Получили такую же формулу, что и в сумме $ (a, b) + (c,d) \implies (a, b) + (c,d) = (c, d) + (a, b). $
+\end{axiom4}
 
 \end{document}
