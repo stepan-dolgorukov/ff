@@ -44,6 +44,7 @@ $$
 $$
 = \frac{a_1 * b_2 * b_3 + a_2 * b_1 * b_3 + a_3 * b_1 * b_2}{b_1 * b_2 * b_3}
 $$
+
 Получились одинаковые формулы.
 $ \implies $
 Они задают равные элементы.
@@ -51,7 +52,35 @@ $ \implies $
 $
 ((a_1, b_1) + (a_2, b_2)) + (a_3, b_3) =
 (a_1, b_1) + ((a_2, b_2) + (a_3, b_3))
+\newline
 $
+
+Теперь с классами.
+$$
+(\overline{(a_1, b_1)} + \overline{(a_2, b_2)}) + \overline{(a_3, b_3)} =
+(\overline{(a_1 * b_2 + b_1 * a_2, b_1 * b_2)} + \overline{(a_3, b_3)} =
+$$
+$$
+=\overline{(a_1 * b_2 * b_3 + b_1 * a_2 * b_3 + a_3 * b_1 * b_2,
+b_1 * b_2 * b_3)} =
+$$
+$$
+= \overline{(a_1 * b_2 * b_3 + a_2 * b_1 * b_3 + a_3 * b_1 * b_2,
+b_1 * b_2 * b_3)}
+$$
+
+$$
+\overline{(a_1, b_1)} + (\overline{(a_2, b_2)} + \overline{(a_3, b_3)}) =
+\overline{(a_1, b_1)} + (\overline{(a_2 * b_3 + b_2 * a_3, b_2 * b_3)} =
+$$
+$$
+= \overline{(a_1 * b_2 * b_3 + b_1 * a_2 * b_3 + b_1 * b_2 * a_3,
+b_1 * b_2 * b_3)} =
+$$
+$$
+\overline{(a_1 * b_2 * b_3 + a_2 * b_1 * b_3 + a_3 * b_1 * b_2,
+b_1 * b_2 * b_3)}
+$$
 \end{axiom1}
 \newpage
 
